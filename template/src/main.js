@@ -3,9 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'font-awesome/css/font-awesome.css';
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+import VeeValidate from 'vee-validate'
 
 Vue.config.productionTip = false
+
+Vue.use(VeeValidate)
+
+Vue.component('icon', Icon)
 
 /* eslint-disable no-new */
 new Vue({
