@@ -24,5 +24,26 @@ app.all('/*', function(req, res, next) {
     next();
 });
 
+// app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
+//     let sender = req.params.sender.trim().split('+').join(' ')
+//     let message = req.params.message.trim().split('+').join(' ')
+
+//     message = {
+//         from: 'postmaster@sandboxd41e30f3953d4cd5a6bdf01a77f5a264.mailgun.org',
+//         to: 'jeremy.l.harmon@gmail.com', // comma separated list
+//         subject: 'A new message from your home page!',
+//         html: `<p>From: ${sender}</p> <p>E-mail: ${req.params.senderEmail}</p> <p>Message: ${message} </p>`
+//     };
+//     transporter.sendMail(message, function(error, info){
+//         if (error) {
+//             console.log(error);
+//             res.send(error);
+//         } else {
+//             console.log('Sent: ' + info.response);
+//             res.send("Success!");
+//         }
+//     });
+// });
+
 app.listen(port);
 console.log('server started '+ port);
